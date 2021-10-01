@@ -187,4 +187,12 @@ nav {
     height: 10%;
     text-align: center;
 }
-
+/* Footer Styler */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: lavender;
+    padding-bottom: 6%;
+}
