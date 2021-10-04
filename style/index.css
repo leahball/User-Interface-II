@@ -169,27 +169,24 @@ header nav {
 /*Gallery Styles*/
 #projects {
     outline: 1px red solid;
-    height: 800px;
 }
-.gallery {
+.mainGallery {
     outline: 2px solid blue;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
     margin: 4% 2%;
 }
 .photo {
     outline: 2px solid green;
     display: flex;
     justify-content: center;
-    height: 35vh;
-    width: 30%;
     align-items: center;
-    position: relative;
+    height: 35vh;
+    width: 38vh;
 }
-
-
 .planter {
     background-image:url(../assets/One.jpg);
     background-position: center;
@@ -220,13 +217,10 @@ header nav {
     background-position: center;
     background-size: cover;
 }
-.photo p {
-    text-align: center;
+p {
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    padding: 2%;
+    text-align: center;
+    padding: 4%;
 }
 /* Footer Styler */
 footer {
