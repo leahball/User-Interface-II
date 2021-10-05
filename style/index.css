@@ -104,10 +104,10 @@ header {
     flex-flow: row wrap;
     align-content:flex-start;
     padding: 3% 4% 0;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); */
     outline: 1px solid red;
 
 }
@@ -185,7 +185,7 @@ header nav {
     justify-content: center;
     align-items: center;
     height: 35vh;
-    width: 38vh;
+    width: 45vh;
 }
 .planter {
     background-image:url(../assets/One.jpg);
@@ -230,4 +230,33 @@ footer {
     width: 100%;
     background-color: lavender;
     padding-bottom: 6%;
+}
+
+@media (max-width:500px) {
+ 
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    header {
+        flex-direction: column;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    .photo {
+        width: 30vh;
+    }
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    #about {
+        height: 45vh;
+    }
 }
