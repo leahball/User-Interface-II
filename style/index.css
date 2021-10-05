@@ -108,18 +108,22 @@ header {
     top: 0;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.8); */
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 
 }
+.container {
+   width: 100%;
+   display: inline;
+}
 .logo {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     width: 35%;
 }
 header nav {
     width: 65%;
     display: flex;
     justify-content: space-evenly;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 
 }
 
@@ -168,24 +172,24 @@ header nav {
 
 /*Gallery Styles*/
 #projects {
-    outline: 1px red solid;
+    width: 100%;
+    /* outline: 1px red solid; */
 }
 .mainGallery {
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: wrap;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 4% 2%;
+    margin: 2% 2%;
 }
 .photo {
-    outline: 2px solid green;
+    /* outline: 2px solid green; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 35vh;
-    width: 45vh;
+    min-width: 65vh;
 }
 .planter {
     background-image:url(../assets/One.jpg);
@@ -231,9 +235,19 @@ footer {
     background-color: lavender;
     padding-bottom: 6%;
 }
+@media (max-width: 800px) {
+    .photo {
+        min-width: 55vh;
+    }
+}
 
 @media (max-width:500px) {
  
+    .mainGallery {
+        justify-content: center;
+        align-items: center;
+        margin: 3%;
+    }
     .logo {
         width: 100%;
         text-align: center;
@@ -244,7 +258,7 @@ footer {
         justify-content: center;
     }
     .photo {
-        width: 30vh;
+        min-width: 45vh;
     }
     .links {
         flex-direction: column;
@@ -258,5 +272,13 @@ footer {
     }
     #about {
         height: 45vh;
+    }
+}
+
+
+@media (max-width: 370px) {
+    .mainGallery {
+        justify-content: center;
+        align-items: center;
     }
 }
