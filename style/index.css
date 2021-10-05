@@ -37,9 +37,7 @@ body {
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
     max-width: 100%;
-    border: 1px solid grey;
 }
 
 /* General Styles */
@@ -73,7 +71,8 @@ h1{
     letter-spacing:.3em;
 }
 h2{
-    font-size:8rem;
+    font-size:10rem;
+    text-shadow: 2px 2px hotpink;
 }
 h3{
     font-size:2.5rem;
@@ -99,34 +98,51 @@ button:hover {
 
 /*Header Styles*/
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
     width: 100%;
-    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    align-content:flex-start;
+    padding: 3% 4% 0;
+    /* position: fixed;
     top: 0;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); */
+    /* outline: 1px solid red; */
 
 }
-.name {
-    width: 25%;
-    display: flex;
-    margin-left: 5%;
+.container {
+   width: 100%;
+   display: inline;
 }
-.links  {
-    width: 55%;
+.logo {
+    /* outline: 1px solid red; */
+    width: 35%;
+}
+header nav {
+    width: 65%;
     display: flex;
-    justify-content:space-evenly;
-    margin-right: 4%;
+    justify-content: space-evenly;
+    /* outline: 1px solid red; */
+
+}
+
+.links  {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    background-color: lavender;
+
 } 
+
 .links:hover {
     color:black;
 }
 .links a {
     background-color: lavender;
-    padding: 2% 8%;
+    padding: 2% 6%;
 
 }
 .links a:hover {
@@ -136,7 +152,7 @@ nav {
 /*About Section Styles*/
 
 #about {
-    height: 75vh;
+    height: 85vh;
     background-image: url('../assets/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,36 +172,59 @@ nav {
 
 /*Gallery Styles*/
 #projects {
-    /* outline: 1px red solid; */
-    height: 800px;
-}
-.gallery {
-    /* outline: 2px solid blue; */
     width: 100%;
-    height: 100%;
+    /* outline: 1px red solid; */
+}
+.mainGallery {
+    /* outline: 2px solid blue; */
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: wrap;
+    justify-content: space-between;
     align-items: center;
+    margin: 2% 2%;
 }
 .photo {
     /* outline: 2px solid green; */
     display: flex;
-    justify-content: center;
-    height: 40%;
-    width: 30%;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    height: 35vh;
+    min-width: 65vh;
 }
-.photo img {
-    height: 90%;
-    width: 100%;
+.planter {
+    background-image:url(../assets/One.jpg);
     background-position: center;
     background-size: cover;
 }
-.photo p {
-    height: 10%;
+.mug {
+    background-image: url(../assets/two.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.plate {
+    background-image: url(../assets/three.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mug2 {
+    background-image: url(../assets/four.png);
+    background-position: center;
+    background-size: cover;
+}
+.set {
+    background-image: url(../assets/five.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.plate2 {
+    background-image: url(../assets/six.png);
+    background-position: center;
+    background-size: cover;
+}
+p {
+    background-color: white;
     text-align: center;
+    padding: 4%;
 }
 /* Footer Styler */
 footer {
@@ -195,4 +234,51 @@ footer {
     width: 100%;
     background-color: lavender;
     padding-bottom: 6%;
+}
+@media (max-width: 800px) {
+    .photo {
+        min-width: 55vh;
+    }
+}
+
+@media (max-width:500px) {
+ 
+    .mainGallery {
+        justify-content: center;
+        align-items: center;
+        margin: 3%;
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    header {
+        flex-direction: column;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    .photo {
+        min-width: 45vh;
+    }
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    #about {
+        height: 45vh;
+    }
+}
+
+
+@media (max-width: 370px) {
+    .mainGallery {
+        justify-content: center;
+        align-items: center;
+    }
 }
